@@ -17,10 +17,15 @@ struct RestaurantDetail: View {
     var body: some View {
         let restaurant = viewModel.restaurant
         
-        ScrollView {
-            if isLoading {
-                ProgressView()
-            } else {
+        if isLoading {
+            ProgressView()
+                .onAppear {
+                    viewModel.fetch(id: id, moc: moc) { isLoading  in
+                        self.isLoading = isLoading
+                    }
+                }
+        } else {
+            ScrollView {
                 VStack {
                     mainViewModel.restaurantImages[restaurant.pictureId]?
                         .resizable()
@@ -54,7 +59,11 @@ struct RestaurantDetail: View {
                             
                             HStack {
                                 ForEach (restaurant.categories) { category in
-                                    Text(category.name)
+                                    if (category.id != restaurant.categories.last?.id) {
+                                        Text("\(category.name),")
+                                    } else {
+                                        Text(category.name)
+                                    }
                                 }
                             }
                         }
@@ -98,11 +107,6 @@ struct RestaurantDetail: View {
                 }
                 .navigationTitle(restaurant.name)
                 .navigationBarTitleDisplayMode(.inline)
-            }
-        }
-        .onAppear {
-            viewModel.fetch(id: id, moc: moc) { isLoading  in
-                self.isLoading = isLoading
             }
         }
     }

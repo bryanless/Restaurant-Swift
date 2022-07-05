@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93D931682874F158005BFA4B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D931672874F158005BFA4B /* SearchBar.swift */; };
 		CE44F1012851CD7800E0B843 /* RestaurantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44F1002851CD7800E0B843 /* RestaurantApp.swift */; };
 		CE44F1032851CD7800E0B843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44F1022851CD7800E0B843 /* ContentView.swift */; };
 		CE44F1052851CD7A00E0B843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE44F1042851CD7A00E0B843 /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		CEBD54B72852665C00E1934E /* RestaurantRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54B62852665C00E1934E /* RestaurantRow.swift */; };
 		CEBD54B92852702E00E1934E /* RestaurantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54B82852702E00E1934E /* RestaurantDetail.swift */; };
 		CEBD54BB2852747E00E1934E /* RestaurantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54BA2852747E00E1934E /* RestaurantDetailViewModel.swift */; };
-		CEBD54BD2852867500E1934E /* RestaurantFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54BC2852867500E1934E /* RestaurantFilter.swift */; };
 		CEBD54C02852883700E1934E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54BF2852883700E1934E /* Profile.swift */; };
 		CEBD54C528528C5600E1934E /* User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54C328528C5600E1934E /* User.xcdatamodeld */; };
 		CEBD54C728528C8800E1934E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD54C628528C8700E1934E /* DataController.swift */; };
@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93D931672874F158005BFA4B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		93E28C492874DB5200278841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE44F0FD2851CD7800E0B843 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE44F1002851CD7800E0B843 /* RestaurantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantApp.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		CEBD54B62852665C00E1934E /* RestaurantRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRow.swift; sourceTree = "<group>"; };
 		CEBD54B82852702E00E1934E /* RestaurantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetail.swift; sourceTree = "<group>"; };
 		CEBD54BA2852747E00E1934E /* RestaurantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewModel.swift; sourceTree = "<group>"; };
-		CEBD54BC2852867500E1934E /* RestaurantFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantFilter.swift; sourceTree = "<group>"; };
 		CEBD54BF2852883700E1934E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CEBD54C428528C5600E1934E /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		CEBD54C628528C8700E1934E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -116,7 +116,6 @@
 			children = (
 				CE44F10F2851CDB400E0B843 /* RestaurantList.swift */,
 				CEBD54B62852665C00E1934E /* RestaurantRow.swift */,
-				CEBD54BC2852867500E1934E /* RestaurantFilter.swift */,
 				CEBD54B82852702E00E1934E /* RestaurantDetail.swift */,
 			);
 			path = Restaurants;
@@ -179,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBD54C928528F4100E1934E /* FavoriteButton.swift */,
+				93D931672874F158005BFA4B /* SearchBar.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -278,9 +278,9 @@
 				CEBD54C528528C5600E1934E /* User.xcdatamodeld in Sources */,
 				CEBD54CA28528F4100E1934E /* FavoriteButton.swift in Sources */,
 				CE44F1032851CD7800E0B843 /* ContentView.swift in Sources */,
+				93D931682874F158005BFA4B /* SearchBar.swift in Sources */,
 				CEBD54BB2852747E00E1934E /* RestaurantDetailViewModel.swift in Sources */,
 				CE44F11E2851D1B900E0B843 /* MainViewModel.swift in Sources */,
-				CEBD54BD2852867500E1934E /* RestaurantFilter.swift in Sources */,
 				CEBD54C728528C8800E1934E /* DataController.swift in Sources */,
 				CE44F1192851D01900E0B843 /* RestaurantInfo.swift in Sources */,
 				CE44F1132851CDF400E0B843 /* RestaurantApi.swift in Sources */,

@@ -83,8 +83,7 @@ struct RestaurantApi {
             }
             
             if (response?.mimeType != JPEG_MIME_TYPE) {
-                // TODO: Add image placeholder
-                let image = Image("image_placeholder")
+                let image = Image(systemName: "photo.on.rectangle.angled")
 
                 DispatchQueue.main.async {
                     completion(image)

@@ -15,7 +15,7 @@ struct RestaurantInfo: Codable {
 }
 
 // MARK: - Restaurant
-struct Restaurant: Codable {
+struct Restaurant: Codable, Identifiable {
     var id: String = ""
     var name: String = ""
     var description: String = ""
