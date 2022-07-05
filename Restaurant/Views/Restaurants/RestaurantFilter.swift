@@ -20,7 +20,7 @@ struct RestaurantFilter: View {
                         Text(city.rawValue.capitalized)
                     }
                 }
-                .pickerStyle(.inline)
+                .pickerStyle(InlinePickerStyle())
             }
             .navigationTitle("Filter Restaurant")
             .toolbar {

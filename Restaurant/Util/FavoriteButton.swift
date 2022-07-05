@@ -37,7 +37,7 @@ struct FavoriteButton: View {
             try? moc.save()
         } label: {
             Label("Toggle Favorite", systemImage: isSet ? "heart.fill" : "heart")
-                .labelStyle(.iconOnly)
+                .labelStyle(IconOnlyLabelStyle())
                 .foregroundColor(isSet ? .red : .gray)
                 .font(.system(size: 24))
         }

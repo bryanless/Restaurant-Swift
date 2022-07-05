@@ -19,7 +19,7 @@ struct ContentView: View {
         TabView {
             RestaurantList()
                 .tabItem {
-                    Label("Restaurants", systemImage: "fork.knife")
+                    Label("Restaurants", systemImage: "building.2")
                 }
                 .tag(Tab.restaurants)
             

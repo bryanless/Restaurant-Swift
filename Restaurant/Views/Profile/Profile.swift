@@ -11,7 +11,7 @@ struct Profile: View {
     @EnvironmentObject var viewModel: MainViewModel
     
     @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.id)],
+        sortDescriptors: [NSSortDescriptor(key: "id", ascending: true)],
         predicate: NSPredicate(format: "isFavorite = true")) private var favorites: FetchedResults<Favorites>
     
     private var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -25,9 +25,9 @@ struct Profile: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 200)
                         .clipShape(Circle())
-                        .overlay {
-                            Circle().stroke(.black, lineWidth: 3)
-                        }
+                        .overlay(
+                            Circle().stroke(Color.black, lineWidth: 3)
+                        )
                     
                     Text("Bryan")
                         .font(.title2)

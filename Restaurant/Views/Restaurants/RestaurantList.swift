@@ -42,21 +42,22 @@ struct RestaurantList: View {
             } else {
                 List {
                     ForEach (filteredRestaurants) { restaurant in
-                        NavigationLink {
-                            RestaurantDetail(id: restaurant.id)
-                        } label: {
+                        NavigationLink(
+                            destination: RestaurantDetail(id: restaurant.id)
+                        ) {
                             RestaurantRow(restaurant: restaurant)
                         }
                         .tag(restaurant.id)
                     }
                 }
                 .navigationTitle("Restaurants")
-                .searchable(text: $searchText, prompt: "Search a character")
+                // TODO: searchable
+//                .searchable(text: $searchText, prompt: "Search a character")
                 .toolbar {
                     Button {
                         showingFilter.toggle()
                     } label: {
-                        Label("Filter", systemImage: "line.3.horizontal.decrease.circle")
+                        Label("Filter", systemImage: "line.horizontal.3.decrease.circle")
                     }
                 }
                 .sheet(isPresented: $showingFilter) {
@@ -70,6 +71,7 @@ struct RestaurantList: View {
 struct RestaurantList_Previews: PreviewProvider {
     static var previews: some View {
         RestaurantList()
+            .environment(\.managedObjectContext, DataController().container.viewContext)
             .environmentObject(MainViewModel())
     }
 }
