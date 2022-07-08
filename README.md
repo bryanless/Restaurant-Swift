@@ -29,7 +29,7 @@ This app helps you access information about restaurants including location, them
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/bryanless/Restaurant-Swift/blob/main/LICENSE.md) file for details
 
 ## Acknowledgments
 
